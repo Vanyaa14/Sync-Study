@@ -1,0 +1,200 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+  background: #0f0f1a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* GLASS DARK CARD */
+.section,
+.signup-section,
+.form-section {
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(45deg, #00f5ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #ddd;
+}
+
+/* INPUTS */
+input {
+  width: 80%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: #1a1a2e;
+  color: white;
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: 0 0 10px #00f5ff;
+}
+
+/* BUTTONS */
+button {
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(45deg, #00f5ff, #ff00c8);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #ff00c8;
+}
+
+/* 🌌 HERO (FIRST SCREEN FIXED BEAUTIFUL) */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+              url('../assets/map.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  text-align: center;
+  animation: slideUp 1.2s ease;
+}
+
+.hero p {
+  color: #aaa;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.hero span {
+  display: inline-block;
+  margin-top: 30px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+/* MAP */
+#map {
+  height: 400px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* REQUEST BOX */
+#requestsBox div {
+  background: #1a1a2e;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+}
+
+/* CHAT */
+#chatBox {
+  height: 200px;
+  overflow-y: auto;
+  background: #111;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* DASHBOARD ICONS */
+.dashboard {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.icon-btn {
+  display: block;
+  margin: 12px;
+  font-size: 22px;
+  background: linear-gradient(45deg, #00f5ff, #ff00c8);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+/* ✨ ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+.icon-btn {
+  display: block;
+  margin: 12px;
+  font-size: 22px;
+  background: linear-gradient(45deg, #00f5ff, #ff00c8);
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+  color: white; /* THIS ensures icons show */
+}
+#groupOptions .icon-btn {
+  margin: 8px;
+  font-size: 18px;
+  padding: 12px;
+}

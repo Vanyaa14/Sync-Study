@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <h1>Sync<span style="color:#00f5ff;">Study</span></h1>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<!-- SIGNUP SECTION -->
+<section class="section signup-section">
+  <h2>Create Your Account</h2>
+
+  <input type="text" id="name" placeholder="Full Name">
+  <input type="email" id="email" placeholder="College Email ID">
+  <input type="text" id="regno" placeholder="Registration Number (25XXXYYYYY)">
+  <input type="text" id="gender" placeholder="Gender (Optional)">
+
+  <button onclick="signup()">Sign Up</button>
+</section>
+
+<!-- HERO SECTION -->
+<section class="section hero">
+  <div class="hero-content">
+    <h1>⚡ Sync Study</h1>
+    <p>Swipe, Match, Study Smarter!</p>
+    <span onclick="scrollToSection('formSection')">↓ Explore</span>
+  </div>
+</section>
+<section class="dashboard">
+
+  <div class="dash-item" onclick="toggleStatus()">
+    <i class="fa-solid fa-power-off"></i>
+    <span id="statusText">Inactive</span>
+  </div>
+
+  <div class="dash-item" onclick="updateLocation()">
+    <i class="fa-solid fa-location-crosshairs"></i>
+    <span>Update Location</span>
+  </div>
+
+  <div class="dash-item" onclick="createGroup()">
+    <i class="fa-solid fa-users"></i>
+    <span>Create Group</span>
+  </div>
+
+</section>
+
+<!-- FORM SECTION -->
+<section id="formSection" class="section form-section">
+  <h2>Start Study Session</h2>
+
+  <input type="text" id="subject" placeholder="Enter Subject (e.g. DSA)">
+  <input type="text" id="faculty" placeholder="Enter Faculty Name">
+  <input type="text" id="time" placeholder="Enter Time (e.g. Now / 3pm)">
+  <input type="text" id="locationInput" placeholder="Enter Location (e.g. Library)">
+
+  <button onclick="startSession()">Start</button>
+</section>
+
+<!-- MAP SECTION -->
+<section id="mapSection" class="section">
+  <h2>Live Map</h2>
+  <div id="map"></div>
+</section>
+
+<section class="section">
+  <h2>Your Requests</h2>
+  <div id="requestsBox"></div>
+</section>
+<section class="section">
+  <h2>Chat</h2>
+
+  <div id="chatBox"></div>
+
+  <input type="text" id="chatInput" placeholder="Type message...">
+
+  <input type="file" id="fileInput" style="display:none">
+
+  <button onclick="sendMessage()">Send</button>
+  <button onclick="document.getElementById('fileInput').click()">📎</button>
+</section>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="js/script.js"></script>
+<div class="dashboard">
+
+  <div id="statusBtn" class="icon-btn" onclick="toggleActive()">🔴</div>
+
+  <div class="icon-btn" onclick="updateLocation()">📍</div>
+
+  <div class="icon-btn" onclick="toggleGroupOptions()">👥</div>
+
+<div id="groupOptions" style="display:none; position:fixed; bottom:100px; right:30px;">
+
+  <div class="icon-btn" onclick="createOfflineGroup()">📍</div>
+  <div class="icon-btn" onclick="createOnlineGroup()">💻</div>
+
+</div>
+</div>
+
+</body>
+</html>
